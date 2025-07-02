@@ -1,94 +1,67 @@
-🎈 Bubble Game – A JavaScript Mini Project
-A fun and interactive browser game designed for JavaScript beginners and also for experienced developers looking to brush up on DOM manipulation, event bubbling, and game logic.
+# 🎈 Bubble Game – JavaScript Mini Project
 
-📸 Preview
-Click the bubbles! Match the target number before time runs out and rack up your score.
+A fun browser-based game where you click the right bubble before the timer runs out. Perfect for **JavaScript beginners** to learn the basics, or for **experienced developers** to brush up on DOM manipulation and event handling.
 
-🧠 What You'll Learn
-🔹 The ABCs of HTML, CSS, and JavaScript
-🔹 How to manipulate the DOM to create dynamic interfaces
-🔹 Make things pop with event bubbling
-🔹 Build a real game project from scratch to test your JS fundamentals
+---
+
+## 🧠 What You'll Learn
+
+- ✅ The ABCs of **HTML**, **CSS**, and **JavaScript**
+- ✅ How to **manipulate the DOM** to create interactive UI
+- ✅ Make things pop with **event bubbling**
+- ✅ Build a **complete game project** from scratch
+
+---
+
+## 📸 Preview
+
+> Click the bubble matching the target number. Score points and beat the clock!
+
+
+## 🚀 Getting Started
+
+### ✅ Run Locally
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/your-username/bubble-game.git
+   cd bubble-game
+Open index.html in your browser.
+
+Play the game 🎮
 
 📁 Project Structure
 bash
 Copy
 Edit
 bubble-game/
-│
-├── index.html        # Markup for the game layout
-├── style.css         # Basic styling for the game
-└── script.js         # Core game logic in JavaScript
-🚀 How to Run
-Download or clone the repository:
+├── index.html    # Game layout
+├── style.css     # Game styling
+└── script.js     # Game logic
 
-bash
+Instead of adding listeners to every bubble, we use event bubbling for efficiency!
+
+💡 You Could Also Add
+🔊 Sound effects
+
+🏆 High score saving
+
+⏱️ Difficulty levels
+
+🎮 Start / Restart button
+
+🌈 Animated bubbles or themes
+
+✨ Great For
+🟢 Beginners — Learn core web dev skills by building something fun
+
+🟡 Intermediates — Practice JavaScript logic & layout
+
+🔵 Experts — Brush up on core DOM & events
+
+
+If you liked this project, feel free to ⭐️ star the repo and share it!
+
+yaml
 Copy
 Edit
-git clone https://github.com/your-username/bubble-game.git
-Open index.html in your browser.
-
-Start playing — Click the bubble that matches the target number to gain points!
-
-🧩 Core Game Logic (JavaScript)
-📌 Game Variables
-js
-Copy
-Edit
-var timer = 6;
-var score = 0;
-var randomNumber = 0;
-🎯 Game Functions
-scoreUpdate() → Updates your score by 10 points.
-
-hitVal() → Sets a new random target number to "hit".
-
-makeBubble() → Generates 160 clickable bubbles with random numbers.
-
-runTimer() → Starts a 6-second countdown. When time runs out, the game ends.
-
-Event Bubbling: Efficiently handles clicks on bubbles using one event listener.
-
-📥 Event Bubbling (Why it's used)
-Instead of adding event listeners to 160+ bubbles, we attach one to their common parent. This uses event bubbling to catch all clicks efficiently.
-
-js
-Copy
-Edit
-document.querySelector("#pbottom").addEventListener("click", function(details){
-    var clickedNumber = Number(details.target.textContent);
-    if(clickedNumber === randomNumber){
-        scoreUpdate();
-        makeBubble();
-        hitVal();
-    }
-});
-💡 Key JavaScript Concepts Covered
-✅ DOM Manipulation
-✅ querySelector()
-✅ setInterval()
-✅ Math.random() & Math.floor()
-✅ Global variables
-✅ Event bubbling
-✅ Template literals
-✅ Game loop logic
-
-🧪 Ideal For
-🟢 Beginners: Learn the building blocks of a web game
-🟡 Intermediate devs: Practice structuring JS and working with the DOM
-🔵 Experienced devs: Revisit the fundamentals with a lightweight project
-
-🎁 Bonus Ideas
-Want to level it up?
-
-Add sound effects 🎵
-
-Add a start/restart button 🎮
-
-Keep track of high scores 🏆
-
-Add difficulty levels (more bubbles or less time) ⏱️
-
-👨‍💻 Author
-Yashvardhan Jadhav
-Feel free to connect or fork this project!
